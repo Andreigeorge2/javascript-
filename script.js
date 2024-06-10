@@ -1,26 +1,48 @@
-// declaim variable var let si const 
+// // Tipuri date primitive 
 
-//let myNumber=2;
-//console.log(myNumber);
+// // bolean
+//  let isActive=false;
+// console.log(typeof isActive);
+ 
+// // number
+//  let myNumber=10.3;
+// console.log(typeof myNumber);
 
-//myNumber=10;
-//console.log(myNumber);
+// // bigint
+// // symbol
 
-//const age=20
-//console.log (age);
+// //string
+// let fullName="Alex Pop;"
+// console.log(typeof fullName);
+// // null 
 
-//let message;
-//console.log(message);
+// let myNull=null;
+// console.log(typeof myNull);
+// // 2. tipuri de date referinta 
+// //undefined
+// let myUndefinited;
+// console.log(typeof myUndefinited);
 
-// Reguli de denumire  
-//1. numele poate sa contina doar litere, cifre, _sau $
-//2.numele nu poate incepe cu o cifra, nu contine spatii 
-// sau cuvinte
+// //tipuri de date referinta
+// //array-uri
+// // obiecte
+// // functii
+// //date calendaristice
+// // expresi regex
 
-{
-let firstName = "Andrei";
-console.log(firstName); // Logs "Andrei"
+// let person= {
+//     firstName:"Alex",
+//     lastname:"Pop",
+//     age:30
 
-console.log(firstName); // Logs "Andrei" again
+// }
+// console.log(typeof person);
+    
+let firstnumber= {value: 1};
+let secondNumber=firstnumber;
+console.log(firstnumber)
+console.log(secondNumber)
 
-}
+firstnumber.value=10;
+console.log(firstnumber);
+console.log(secondNumber);
