@@ -1,48 +1,43 @@
-// // Tipuri date primitive 
+// // operators javascript 
+// let firstNumber=10;
+//  let secondNumber=2;
+//  console.log(firstNumber+secondNumber);
+//  console.log(firstNumber-secondNumber);
+//  console.log (firstNumber*secondNumber);
+//  console.log(firstNumber/secondNumber);
+// console.log(firstNumber% secondNumber);
 
-// // bolean
-//  let isActive=false;
-// console.log(typeof isActive);
- 
-// // number
-//  let myNumber=10.3;
-// console.log(typeof myNumber);
+// let myNumber=1;
+// myNumber++;// MyNumber= MyNumber= MyNumber +1
+// myNumber--;// MyNumber= MyNumber-1;
+// console.log(myNumber);
 
-// // bigint
-// // symbol
+// operators compactions <, <=, >, >=, ==, !=, ===, !=== 
 
-// //string
-// let fullName="Alex Pop;"
-// console.log(typeof fullName);
-// // null 
+//let firstNumber = 10;
+//let secondNumber = "10";
 
-// let myNull=null;
-// console.log(typeof myNull);
-// // 2. tipuri de date referinta 
-// //undefined
-// let myUndefinited;
-// console.log(typeof myUndefinited);
+//console.log(firstNumber == secondNumber); // Loose equality comparison
 
-// //tipuri de date referinta
-// //array-uri
-// // obiecte
-// // functii
-// //date calendaristice
-// // expresi regex
+// operators logics
+//let expression1=3 >5;//false
+//let expression2 = 1 <2//true
+//console.log(expression1 && expression2);
+//console.log(expression1 || expression2);
+//console.log (!expression1);
 
-// let person= {
-//     firstName:"Alex",
-//     lastname:"Pop",
-//     age:30
+// operators de attribute =, -=, += *
+let firstNumber=10;
+firstNumber +=5; firstNumber = firstNumber- 5;
 
-// }
-// console.log(typeof person);
-    
-let firstnumber= {value: 1};
-let secondNumber=firstnumber;
-console.log(firstnumber)
-console.log(secondNumber)
+//operators de conecatenare 
+let firstName="Andrei";
+let secondName= "Pop";
+let fullName=firstName  +" "+ secondName
+console.log(fullName);
 
-firstnumber.value=10;
-console.log(firstnumber);
-console.log(secondNumber);
+//operatorul ternar 
+//expresie? <exp adevarata> : <exp falsa>
+
+let result = 3 < 5 ? "adevarat" : "fals"
+console.log(result);
