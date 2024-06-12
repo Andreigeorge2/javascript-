@@ -1,24 +1,20 @@
-// let firstName='Alex';
-// let lastName="Pop";
+let curentDate= new Date();
+console.log(curentDate);
+console.log(typeof curentDate);
 
-// console.log(firstName);
+let date2=  new Date (2024,11,15);
+console.log(date2);
 
-// console.log(firstName[3]);
+let date3 =new Date("2023-12-20 10:50:35");
+console.log(date3);
 
-// console.log(firstName.length);
+console.log(date3.getFullYear());
+console.log(date3.getMonth());
+console.log(date3.getDate());
+console.log(date3.getHours());
+console.log(date3.getMinutes());
+console.log(date3.getSeconds());
 
-// let fullName=firstName+ "  " + lastName;
 
-// console.log(fullName);
 
-// console.log(lastName.indexOf("o"));
 
-// let message="Acesta este un mesaj";
-// let arr=message.split(" ")
-// let newMessage=arr.join("= ")
-// console.log(newMessage);
-
-let firstName = "Andrei";
-let lastName = "George";
-let message = `Numele meu este: ${firstName} ${lastName}`;
-console.log(message);
