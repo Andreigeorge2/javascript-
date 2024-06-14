@@ -1,79 +1,63 @@
-// // // let value = 1;
+// let person = {
+//     firstName: "Alex",
+//     lastName: "Pop",
+//     age: 40,
+//     sayHello: function() {
+//         console.log(`Salut, numele meu este ${this.firstName} ${this.lastName}.`);
+//     }
+// };
 
-// // // function MyFunction(param) {
-// // //     param++; 
-// // //     console.log(`Valoarea lui param este ${param}`); 
-// // // }
-
-// // // MyFunction(value);
-
-// // // console.log(`Valoarea lui value este ${value}`);
-
-
-
-
-// // exercitiu 1 functie simpla de adunare
-
-// // function add(a, b) {
-// //     return a + b;
-// // }
-
-// // let sum = add(3, 4);
-// // console.log(`Suma este: ${sum}`); // Suma este: 7
-
-
-
-
-
-// function isEven(number) {
-//     return number % 2 === 0;
-// }
-
-// // testing function 
-// let check=isEven(5);
-// console.log(`Numărul 5 este par: ${check}`) // numarul 5 este par: false
-
-
-
-
-
-
-// function greet(name) {
-//     return '`Salut, ${name}';
-// }
-
-
-// let greeting=greet("Maria");
-// console.log(greeting);
-
-
-
-
-
-
-// function factorial (n) {
-
-// if (n===0) {
-//     return 1;
-
-// }
-// return n* factorial(n-1);
-
-// }
-
-
-// let result=factorial(5);
-// console.log(`Factorialul lui 5 este: ${result}`);
-
+// let person2 = {
+//     firstName: "Mircea",
+//     lastName: "rares",
+//     age: 50,
     
+// };
+// console.log(person.firstName);
+// person.sayHello();
+// person2.sayHello();
 
+class Person {
+    // Proprietăți private
+    #firstName;
+    #lastName;
+    #age;
 
+    // Constructor
+    constructor(firstName, lastName, age) {
+        this.#firstName = firstName;
+        this.#lastName = lastName;
+        this.#age = age;
+    }
 
-function isNameInList(name, nameList) {
-    return nameList.includes(name);
+    // Metodă pentru a saluta
+    sayHello() {
+        console.log(`Salut, numele meu este ${this.#firstName} ${this.#lastName}.`);
+    }
+
+    // Getter pentru firstName
+    get firstName() {
+        return this.#firstName;
+    }
+
+    // Setter pentru firstName
+    set firstName(newFirstName) {
+        this.#firstName = newFirstName;
+    }
 }
 
-// testeaza functia 
-let names=["Ana", "Mihai", "Alex", "Marius"];
-let nameCheck = isNameInList("Alex", names);
-console.log(`Alex este în listă: ${nameCheck}`); // Alex este în listă: true
+
+let p = new Person('Mihai', 'Ionescu', 30);
+console.log(p.firstName); 
+p.firstName = "Ana"; 
+console.log(p.firstName); 
+
+let p2 = new Person('Mihai', 'Rares', 45);
+console.log(p2.firstName); 
+p2.sayHello(); 
+
+
+
+
+
+
