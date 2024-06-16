@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
-
+    <link rel="stylesheet" href="style.css" />
+    <title>Document Object Model</title>
 </head>
 
 <body>
-    <h1>functi javascript </h1>
-
+    <h1 id="mainTitle" class="title">Document Object Model</h1>
+    <div class="container">
+        <h2 class="title">Lista task-uri</h2>
+        <form id="taskForm" class="task-form">
+            <input type="text" placeholder="Denumire task" />
+            <button type="submit">Adaugă task</button>
+        </form>
+        <div class="list-container">
+            <ul class="tasks">
+                <li class="task">Task1</li>
+                <li class="task">Task2</li>
+                <li class="task">Task3</li>
+            </ul>
+        </div>
+    </div>
     <script src="script.js"></script>
-
-
 </body>
 
 </html>

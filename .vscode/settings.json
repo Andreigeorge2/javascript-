@@ -44,9 +44,11 @@
     "security.promptForLocalFileProtocolHandling": false,
     "js/ts.implicitProjectConfig.checkJs": true,
     "cSpell.words": [
+      "Adauga",
       "adevarat",
       "aplelat",
       "conditie",
+      "denumire",
       "expresie",
       "fals",
       "falsa",

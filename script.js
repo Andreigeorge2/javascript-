@@ -1,63 +1,28 @@
-// let person = {
-//     firstName: "Alex",
-//     lastName: "Pop",
-//     age: 40,
-//     sayHello: function() {
-//         console.log(`Salut, numele meu este ${this.firstName} ${this.lastName}.`);
-//     }
-// };
+const taskForm = document.querySelector("#taskForm");
+taskForm?.addEventListener("submit", onTaskFormSubmit);
 
-// let person2 = {
-//     firstName: "Mircea",
-//     lastName: "rares",
-//     age: 50,
-    
-// };
-// console.log(person.firstName);
-// person.sayHello();
-// person2.sayHello();
+function onTaskFormSubmit(event) {
+    event.preventDefault();
 
-class Person {
-    // Proprietăți private
-    #firstName;
-    #lastName;
-    #age;
+    const taskList = document.querySelector(".tasks");
+    const taskInput = taskForm?.querySelector("input");
 
-    // Constructor
-    constructor(firstName, lastName, age) {
-        this.#firstName = firstName;
-        this.#lastName = lastName;
-        this.#age = age;
+    if (!taskInput?.value) {
+        alert("Completează denumirea");
+        return;
     }
 
-    // Metodă pentru a saluta
-    sayHello() {
-        console.log(`Salut, numele meu este ${this.#firstName} ${this.#lastName}.`);
-    }
+    const newItem = document.createElement("li");
+    newItem.innerText = taskInput.value;
+    newItem.classList.add("task");
+    taskList?.append(newItem);
 
-    // Getter pentru firstName
-    get firstName() {
-        return this.#firstName;
-    }
-
-    // Setter pentru firstName
-    set firstName(newFirstName) {
-        this.#firstName = newFirstName;
-    }
+    newItem.addEventListener("click", ()=> {
+        newItem.remove();
+    });
+   
+   
+   
+   
+    taskInput.value = '';
 }
-
-
-let p = new Person('Mihai', 'Ionescu', 30);
-console.log(p.firstName); 
-p.firstName = "Ana"; 
-console.log(p.firstName); 
-
-let p2 = new Person('Mihai', 'Rares', 45);
-console.log(p2.firstName); 
-p2.sayHello(); 
-
-
-
-
-
-
