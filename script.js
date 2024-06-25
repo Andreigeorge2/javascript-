@@ -1,28 +1,69 @@
-const taskForm = document.querySelector("#taskForm");
-taskForm?.addEventListener("submit", onTaskFormSubmit);
+// @ts-nocheck
+document.addEventListener('DOMContentLoaded', function() {
+    const bitcoinPrice = document.getElementById('bitcoin');
+    const ethereumPrice = document.getElementById('ethereum');
+    const dogecoinPrice = document.getElementById('dogecoin');
 
-function onTaskFormSubmit(event) {
-    event.preventDefault();
-
-    const taskList = document.querySelector(".tasks");
-    const taskInput = taskForm?.querySelector("input");
-
-    if (!taskInput?.value) {
-        alert("Completează denumirea");
-        return;
+    async function fetchCryptoPrices() {
+        try {
+            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin&vs_currencies=usd');
+            const data = await response.json();
+            bitcoinPrice.textContent = data.bitcoin.usd.toFixed(2);
+            ethereumPrice.textContent = data.ethereum.usd.toFixed(2);
+            dogecoinPrice.textContent = data.dogecoin.usd.toFixed(2);
+        } catch (error) {
+            console.error('Error fetching crypto prices:', error);
+        }
     }
 
-    const newItem = document.createElement("li");
-    newItem.innerText = taskInput.value;
-    newItem.classList.add("task");
-    taskList?.append(newItem);
+    fetchCryptoPrices();
+    setInterval(fetchCryptoPrices, 60000); 
+});
 
-    newItem.addEventListener("click", ()=> {
-        newItem.remove();
-    });
-   
-   
-   
-   
-    taskInput.value = '';
-}
+
+  
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+  
+
+    
+
+
+
+
+ 
+
+
+
+
+    
+
+
+
+
+
+
+
